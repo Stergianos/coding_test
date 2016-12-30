@@ -1,0 +1,158 @@
+## This file contains the POD documentation used to create the
+## instructions HTML and the README file
+
+=pod
+
+=head1 Adzuna coding task description
+
+=head2 Files
+
+Here is a short description of the file contents:
+
+=over
+
+=item C<data/>
+
+Some HTML files to be used for parsing
+
+=item C<doc/>
+
+The documentation for the test is here. You can use the I<instructions.html> or the I<README> file. They both have the same content.
+
+=item C<ParseAd.pm>
+
+The first Perl module to work on - initially empty
+
+=item C<ParseCSV.pm>
+
+The second Perl module to work on - it already contains a function
+
+=item C<run.sh>
+
+This bash script will execute the unit tests. That's the only script you will need to run
+
+=item C<t/>
+
+Contains the unit tests and the test data
+
+=back
+
+=head2 Instructions
+
+=head3 1. Running the tests
+
+The first time you run the tests you will notice that most of them will fail.
+This is normal - your task is to fix them ;) Here is the command you need to run:
+
+ $ ./run.sh
+
+When you have completed everything correctly, both the first and second part
+should return an I<"All tests successful."> message.
+
+=head3 2. Initialize git and create a new feature branch
+
+You will need to create a new git repository and commit your work there.
+The initial git branch will be named I<master>, which is the default standard.
+But for commiting your work you should create your own branch (you can call it whatever you like). Just use that branch for commiting your code for the whole task.
+
+=head3 3. Add missing funtionality to ParseAd.pm (Part 1)
+
+First, you will need to add some functionality on an existing I<Perl> module, see instructions in L</Part 1>.
+
+=head3 4. Commit changes
+
+Create a new commit with your changes for L<Part 1>. Any relevant git message will do.
+
+=head3 5. Fix the function code in ParseCSV.pm (Part 2)
+
+See the L</Part 2> page for instructions.
+
+=head3 6. Commit changes
+
+Again, commit your changes to your branch for L<Part 2>.
+
+=head3 7. Merge your branch to the master branch
+
+Now that all your code is committed, you can merge your branch to master.
+
+=head3 8. Sending back the repository
+
+In order to send back your work, you will need to create a tar (or zipped) archive of the git repository. You can do this manually or use the existing make target:
+
+ $ make export
+ ...
+ You can now send back the file 'completed-task.tgz' which you can find on the parent directory
+
+Note that C<make> should already be installed on your system in order to run I<make> commands on the task repository.
+
+=head2 Part 1
+
+This is the first part of the I<Coding Task>,
+a simple Perl module called C<ParseAd>.
+You will need to create a function for this module
+that will parse a web page and extract some information.
+
+There are already some files saved in the C<data/> directory.
+Each of them is an HTML page of a job ad from the same site.
+The function will need to parse the page and return the following
+fields of the ad:
+
+=over
+
+=item * title
+
+=item * location
+
+=item * sector
+
+=item * description
+
+=item * id
+
+=back
+
+The parsing can be performed with whatever you are familiar with
+(regular expressions, DOM parsing, whatever).
+Then the function will be run by the unit test against
+every ad page and the function output will be compared with
+the expected values. These values can be found in the C<t/tests.yaml> file
+and also will be printed on the test output whenever a test case fails.
+
+=head3 Description for the module function
+
+=head4 Name
+
+The function name should be C<ad_fields> - an empty function declaration already exists in the file.
+
+=head4 Function arguments
+
+This function takes only I<one> argument of type string.
+The string will hold the file path for an HTML page saved
+under C<data/>, eg: C<data/file.html>.
+You will need to open that file and parse it.
+
+=head4 Return value
+
+The function should return a Perl I<hashref> where each key is the name
+of the ad field we want to capture and the value is the captured text.
+
+=head2 Part 2
+
+=head3 Description
+
+This is the second part of the I<Coding Task>.
+The existing I<sort_by_population()> function contains one or more errors.
+Try to fix it so that it returns the correct result and the test passes.
+
+=head3 Function input
+
+The input to the function is a string that contains a full I<CSV> file like:
+
+ 1:id,2:country,3:capital,4:population
+ 1,Greece,Athens,3.753
+ 2,France,Paris,2.244
+ 3,Poland,Warsaw,1.711
+
+It then tries to return the name of the capital with the highest population.
+
+=cut

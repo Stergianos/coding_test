@@ -1,0 +1,21 @@
+test_part_1:
+    - file: 000-ad.html
+      title: Senior Physiotherapist
+      location: London, United Kingdom
+      sector: Healthcare & Medical
+      description: 'Self-Employed, Senior Musculoskeletal Physiotherapist wanted in Harley Street London. We are looking for a highly motivated, enthusiastic physiotherapist to join our team at A.L.O Physiotherapy. The candidate should be willing to build and maintain relationships with local GPs and Consultants. Existing clientele would be desirable, also experience with Human Tecar would be beneficial. Essential Requirements: Degree in Physiotherapy CSP Registered HCPC Registered Excellent level of English Please send us your CV and a brief cover letter Due to the high volume of applications we will be unable to respond to every applicant.'
+      id: 1063321
+    - file: 001-ad.html
+      title: Staff supervisor
+      location: Galway, Ireland
+      sector: Hospitality & Tourism
+      description: Need someone that is possibly backpacking around at the moment and looking for full time work from end of Feb to the beginning of Nov to be a staff supervisor to waiter and cleaning staff in adventure centre in west of Ireland. Must have had at least 2 years of experience in a similar position, be fluent in English, speech and understanding. Live in job working with many other staff from around the world. Must send in a full CV with contact references, closing date Fri 16th Dec and will be in touch shortly after that if I wish to continue with an interview either Skype or call out.
+      id: 1063316
+
+test_part_2:
+    input: |
+        1:id,2:country,3:capital,4:population
+        1,Greece,Athens,3.753
+        2,France,Paris,2.244
+        3,Poland,Warsaw,1.711
+    output: Athens is the most populated capital

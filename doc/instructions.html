@@ -1,0 +1,204 @@
+<?xml version="1.0" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Adzuna Coding Task - Description</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rev="made" href="mailto:root@localhost" />
+</head>
+
+<body style="background-color: white">
+
+
+
+<ul id="index">
+  <li><a href="#Adzuna-coding-task-description">Adzuna coding task description</a>
+    <ul>
+      <li><a href="#Files">Files</a></li>
+      <li><a href="#Instructions">Instructions</a>
+        <ul>
+          <li><a href="#Running-the-tests">1. Running the tests</a></li>
+          <li><a href="#Initialize-git-and-create-a-new-feature-branch">2. Initialize git and create a new feature branch</a></li>
+          <li><a href="#Add-missing-funtionality-to-ParseAd.pm-Part-1">3. Add missing funtionality to ParseAd.pm (Part 1)</a></li>
+          <li><a href="#Commit-changes">4. Commit changes</a></li>
+          <li><a href="#Fix-the-function-code-in-ParseCSV.pm-Part-2">5. Fix the function code in ParseCSV.pm (Part 2)</a></li>
+          <li><a href="#Commit-changes1">6. Commit changes</a></li>
+          <li><a href="#Merge-your-branch-to-the-master-branch">7. Merge your branch to the master branch</a></li>
+          <li><a href="#Sending-back-the-repository">8. Sending back the repository</a></li>
+        </ul>
+      </li>
+      <li><a href="#Part-1">Part 1</a>
+        <ul>
+          <li><a href="#Description-for-the-module-function">Description for the module function</a>
+            <ul>
+              <li><a href="#Name">Name</a></li>
+              <li><a href="#Function-arguments">Function arguments</a></li>
+              <li><a href="#Return-value">Return value</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li><a href="#Part-2">Part 2</a>
+        <ul>
+          <li><a href="#Description">Description</a></li>
+          <li><a href="#Function-input">Function input</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="Adzuna-coding-task-description">Adzuna coding task description</h1>
+
+<h2 id="Files">Files</h2>
+
+<p>Here is a short description of the file contents:</p>
+
+<dl>
+
+<dt id="data"><code>data/</code></dt>
+<dd>
+
+<p>Some HTML files to be used for parsing</p>
+
+</dd>
+<dt id="doc"><code>doc/</code></dt>
+<dd>
+
+<p>The documentation for the test is here. You can use the <i>instructions.html</i> or the <i>README</i> file. They both have the same content.</p>
+
+</dd>
+<dt id="ParseAd.pm"><code>ParseAd.pm</code></dt>
+<dd>
+
+<p>The first Perl module to work on - initially empty</p>
+
+</dd>
+<dt id="ParseCSV.pm"><code>ParseCSV.pm</code></dt>
+<dd>
+
+<p>The second Perl module to work on - it already contains a function</p>
+
+</dd>
+<dt id="run.sh"><code>run.sh</code></dt>
+<dd>
+
+<p>This bash script will execute the unit tests. That&#39;s the only script you will need to run</p>
+
+</dd>
+<dt id="t"><code>t/</code></dt>
+<dd>
+
+<p>Contains the unit tests and the test data</p>
+
+</dd>
+</dl>
+
+<h2 id="Instructions">Instructions</h2>
+
+<h3 id="Running-the-tests">1. Running the tests</h3>
+
+<p>The first time you run the tests you will notice that most of them will fail. This is normal - your task is to fix them ;) Here is the command you need to run:</p>
+
+<pre><code> $ ./run.sh</code></pre>
+
+<p>When you have completed everything correctly, both the first and second part should return an <i>&quot;All tests successful.&quot;</i> message.</p>
+
+<h3 id="Initialize-git-and-create-a-new-feature-branch">2. Initialize git and create a new feature branch</h3>
+
+<p>You will need to create a new git repository and commit your work there. The initial git branch will be named <i>master</i>, which is the default standard. But for commiting your work you should create your own branch (you can call it whatever you like). Just use that branch for commiting your code for the whole task.</p>
+
+<h3 id="Add-missing-funtionality-to-ParseAd.pm-Part-1">3. Add missing funtionality to ParseAd.pm (Part 1)</h3>
+
+<p>First, you will need to add some functionality on an existing <i>Perl</i> module, see instructions in <a href="#Part-1">&quot;Part 1&quot;</a>.</p>
+
+<h3 id="Commit-changes">4. Commit changes</h3>
+
+<p>Create a new commit with your changes for <a href="#Part-1">&quot;Part 1&quot;</a>. Any relevant git message will do.</p>
+
+<h3 id="Fix-the-function-code-in-ParseCSV.pm-Part-2">5. Fix the function code in ParseCSV.pm (Part 2)</h3>
+
+<p>See the <a href="#Part-2">&quot;Part 2&quot;</a> page for instructions.</p>
+
+<h3 id="Commit-changes1">6. Commit changes</h3>
+
+<p>Again, commit your changes to your branch for <a href="#Part-2">&quot;Part 2&quot;</a>.</p>
+
+<h3 id="Merge-your-branch-to-the-master-branch">7. Merge your branch to the master branch</h3>
+
+<p>Now that all your code is committed, you can merge your branch to master.</p>
+
+<h3 id="Sending-back-the-repository">8. Sending back the repository</h3>
+
+<p>In order to send back your work, you will need to create a tar (or zipped) archive of the git repository. You can do this manually or use the existing make target:</p>
+
+<pre><code> $ make export
+ ...
+ You can now send back the file &#39;completed-task.tgz&#39; which you can find on the parent directory</code></pre>
+
+<p>Note that <code>make</code> should already be installed on your system in order to run <i>make</i> commands on the task repository.</p>
+
+<h2 id="Part-1">Part 1</h2>
+
+<p>This is the first part of the <i>Coding Task</i>, a simple Perl module called <code>ParseAd</code>. You will need to create a function for this module that will parse a web page and extract some information.</p>
+
+<p>There are already some files saved in the <code>data/</code> directory. Each of them is an HTML page of a job ad from the same site. The function will need to parse the page and return the following fields of the ad:</p>
+
+<ul>
+
+<li><p>title</p>
+
+</li>
+<li><p>location</p>
+
+</li>
+<li><p>sector</p>
+
+</li>
+<li><p>description</p>
+
+</li>
+<li><p>id</p>
+
+</li>
+</ul>
+
+<p>The parsing can be performed with whatever you are familiar with (regular expressions, DOM parsing, whatever). Then the function will be run by the unit test against every ad page and the function output will be compared with the expected values. These values can be found in the <code>t/tests.yaml</code> file and also will be printed on the test output whenever a test case fails.</p>
+
+<h3 id="Description-for-the-module-function">Description for the module function</h3>
+
+<h4 id="Name">Name</h4>
+
+<p>The function name should be <code>ad_fields</code> - an empty function declaration already exists in the file.</p>
+
+<h4 id="Function-arguments">Function arguments</h4>
+
+<p>This function takes only <i>one</i> argument of type string. The string will hold the file path for an HTML page saved under <code>data/</code>, eg: <code>data/file.html</code>. You will need to open that file and parse it.</p>
+
+<h4 id="Return-value">Return value</h4>
+
+<p>The function should return a Perl <i>hashref</i> where each key is the name of the ad field we want to capture and the value is the captured text.</p>
+
+<h2 id="Part-2">Part 2</h2>
+
+<h3 id="Description">Description</h3>
+
+<p>This is the second part of the <i>Coding Task</i>. The existing <i>sort_by_population()</i> function contains one or more errors. Try to fix it so that it returns the correct result and the test passes.</p>
+
+<h3 id="Function-input">Function input</h3>
+
+<p>The input to the function is a string that contains a full <i>CSV</i> file like:</p>
+
+<pre><code> 1:id,2:country,3:capital,4:population
+ 1,Greece,Athens,3.753
+ 2,France,Paris,2.244
+ 3,Poland,Warsaw,1.711</code></pre>
+
+<p>It then tries to return the name of the capital with the highest population.</p>
+
+
+</body>
+
+</html>
+
+
