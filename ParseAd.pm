@@ -74,12 +74,12 @@ sub ad_fields
             id=>$results[4]
         );
         
-      print Dumper \%result;
+      #print Dumper \%result;
       
 	return {};
 }
 
-ad_fields('data/001-ad.html');
+#ad_fields('data/001-ad.html');
  
 
 1;
