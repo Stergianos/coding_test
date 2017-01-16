@@ -111,8 +111,9 @@ fields of the ad:
 
 =back
 
-The parsing can be performed with whatever you are familiar with
-(regular expressions, DOM parsing, whatever).
+The parsing should preferably be performed with regular expressions.
+But if you are more familiar with other Perl modules (for DOM parsing, etc)
+you are free to use those.
 Then the function will be run by the unit test against
 every ad page and the function output will be compared with
 the expected values. These values can be found in the C<t/tests.yaml> file
